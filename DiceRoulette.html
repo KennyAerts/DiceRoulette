@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dice Roulette</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> -->
+  <link rel="stylesheet" href="DiceRoulette.css">
+</head>
+<body>
+
+<h1>Dice Roulette</h1>
+<div class="tableWrapper">
+<div class="grid-container">
+	<div class="red">16</div>	<div class="blk">26</div>	<div class="red">36</div>	<div class="blk">46</div>	<div class="red">56</div>	<div class="blk">66</div>
+	<div class="red">15</div>	<div class="blk">25</div>	<div class="red">35</div>	<div class="blk">45</div>	<div class="red">55</div>	<div class="blk">65</div>
+	<div class="blk">14</div>	<div class="red">24</div>	<div class="blk">34</div>	<div class="red">44</div>	<div class="blk">54</div>	<div class="red">64</div>
+	<div class="blk">13</div>	<div class="red">23</div>	<div class="blk">33</div>	<div class="red">43</div>	<div class="blk">53</div>	<div class="red">63</div>
+	<div class="red">12</div>	<div class="blk">22</div>	<div class="red">32</div>	<div class="blk">42</div>	<div class="red">52</div>	<div class="blk">62</div>
+	<div class="red">11</div>	<div class="blk">21</div>	<div class="red">31</div>	<div class="blk">41</div>	<div class="red">51</div>	<div class="blk">61</div>
+
+  <div id="firstHalfRow">1st H</div>
+  <div id="secondHalfRow">2nd H</div>
+  <div id="first12Row">1st 12</div>
+  <div id="second12Row">2nd 12</div>
+  <div id="third12Row">3rd 12</div>
+  <div id="row6">R6</div>
+  <div id="row5">R5</div>
+  <div id="row4">R4</div>
+  <div id="row3">R3</div>
+  <div id="row2">R2</div>
+  <div id="row1">R1</div>
+
+  <div id="firstHalfColumn">1st H</div>
+  <div id="secondHalfColumn">2nd H</div>
+  <div id="first12Column">1st 12</div>
+  <div id="second12Column">2nd 12</div>
+  <div id="third12Column">3rd 12</div>
+  <div id="column1">C1</div>
+  <div id="column2">C2</div>
+  <div id="column3">C3</div>
+  <div id="column4">C4</div>
+  <div id="column5">C5</div>
+  <div id="column6">C6</div>
+
+  <div class="secondQuarter">2nd Q</div>
+  <div class="fourthQuarter">4th Q</div>
+  <div class="even">Even</div>
+  <div class="firstQuarter">1st Q</div>
+  <div class="thirdQuarter">3rd Q</div>
+  <div class="odd">Odd</div>
+  <div class="red">Red</div>
+  <div class="blk">Black</div>
+  <div class="same">Same</div>
+</div>
+<div class="actionOverlay">
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</div>
+
+</div>
+<div class="diceWrapper">
+   <!-- dice icons: https://game-icons.net/tags/dice.html -->
+  <img class ="diceImage" id="diceImage1" src = "dice/dice-blank.svg">
+	<!-- TODO: add some margin/padding right -->
+  <img class ="diceImage" id="diceImage2" src = "dice/dice-blank.svg">
+	<button onclick="rollDice()">Roll dice</button>
+
+</div>
+
+<script>
+function rollDice() {
+	let diceImage1 = document.getElementById("diceImage1");
+	// repeat random times with Timeout for animation https://www.w3schools.com/js/js_timing.asp
+	// https://www.w3schools.com/jsref/met_win_setinterval.asp
+	// start loop withdelay with setInterval() and stop with clearInterval()
+  let rollValue1 = Math.floor(Math.random() * 6) + 1;
+	diceImage1.src = "dice/dice-"+ rollValue1 +".svg";
+
+	let diceImage2 = document.getElementById("diceImage2");
+	let rollValue2 = Math.floor(Math.random() * 6) + 1;
+  diceImage2.src = "dice/dice-"+ rollValue2 +".svg";
+
+	// https://stackoverflow.com/questions/1723716/how-to-concatenate-two-numbers-in-javascript
+	let rollValueBoth = `${rollValue1}${rollValue2}`;
+
+	}
+
+
+</script>
+
+<script src="DiceRoulette.js"></script>
+
+</body>
+</html>
