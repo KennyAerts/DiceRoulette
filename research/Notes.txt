@@ -1,0 +1,5 @@
+- Click corner
+- Click border
+-> Super impose hidden image
+
+https://www.w3schools.com/cssref/pr_pos_z-index.asp

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dice Roulette</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> -->
+  <link rel="stylesheet" href="DiceRoulette.css">
+</head>
+<body>
+
+<h1>Dice Roulette</h1>
+<div class="tableWrapper">
+<div class="grid-container">
+	<div class="red" id="number16">16</div>	<div class="blk" id="number26">26</div>	<div class="red" id="number36">36</div>	<div class="blk" id="number46">46</div>	<div class="red" id="number56">56</div>	<div class="blk" id="number66">66</div>
+	<div class="red" id="number15">15</div>	<div class="blk" id="number25">25</div>	<div class="red" id="number35">35</div>	<div class="blk" id="number45">45</div>	<div class="red" id="number55">55</div>	<div class="blk" id="number65">65</div>
+	<div class="blk" id="number14">14</div>	<div class="red" id="number24">24</div>	<div class="blk" id="number34">34</div>	<div class="red" id="number44">44</div>	<div class="blk" id="number54">54</div>	<div class="red" id="number64">64</div>
+	<div class="blk" id="number13">13</div>	<div class="red" id="number23">23</div>	<div class="blk" id="number33">33</div>	<div class="red" id="number43">43</div>	<div class="blk" id="number53">53</div>	<div class="red" id="number63">63</div>
+	<div class="red" id="number12">12</div>	<div class="blk" id="number22">22</div>	<div class="red" id="number32">32</div>	<div class="blk" id="number42">42</div>	<div class="red" id="number52">52</div>	<div class="blk" id="number62">62</div>
+	<div class="red" id="number11">11</div>	<div class="blk" id="number21">21</div>	<div class="red" id="number31">31</div>	<div class="blk" id="number41">41</div>	<div class="red" id="number51">51</div>	<div class="blk" id="number61">61</div>
+
+  <div id="firstHalfRow">1st H</div>
+  <div id="secondHalfRow">2nd H</div>
+  <div id="first12Row">1st 12</div>
+  <div id="second12Row">2nd 12</div>
+  <div id="third12Row">3rd 12</div>
+  <div id="row6">R6</div>
+  <div id="row5">R5</div>
+  <div id="row4">R4</div>
+  <div id="row3">R3</div>
+  <div id="row2">R2</div>
+  <div id="row1">R1</div>
+
+  <div id="firstHalfColumn">1st H</div>
+  <div id="secondHalfColumn">2nd H</div>
+  <div id="first12Column">1st 12</div>
+  <div id="second12Column">2nd 12</div>
+  <div id="third12Column">3rd 12</div>
+  <div id="column1">C1</div>
+  <div id="column2">C2</div>
+  <div id="column3">C3</div>
+  <div id="column4">C4</div>
+  <div id="column5">C5</div>
+  <div id="column6">C6</div>
+
+  <div class="secondQuarter">2nd Q</div>
+  <div class="fourthQuarter">4th Q</div>
+  <div class="even">Even</div>
+  <div class="firstQuarter">1st Q</div>
+  <div class="thirdQuarter">3rd Q</div>
+  <div class="odd">Odd</div>
+  <div class="red">Red</div>
+  <div class="blk">Black</div>
+  <div class="same">Same</div>
+</div>
+<div class="actionOverlay">
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</div>
+
+</div>
+<div class="diceWrapper">
+   <!-- dice icons: https://game-icons.net/tags/dice.html -->
+  <img class ="diceImage" id="diceImage1" src = "dice/dice-blank.svg">
+  <img class ="diceImage" id="diceImage2" src = "dice/dice-blank.svg">
+	<button id="rollDiceButton" onclick="rollDice()">Roll dice</button>
+
+</div>
+
+<script>
+
+	// https://javascript.info/js-animation
+	// repeat random times with Timeout for animation https://www.w3schools.com/js/js_timing.asp
+	// https://www.w3schools.com/jsref/met_win_setinterval.asp
+	// start loop withdelay with setInterval() and stop with clearInterval()
+
+// global variables
+let	numberToMark;
+
+function rollDice() {
+
+  // https://stackoverflow.com/questions/13831601/disabling-and-enabling-a-html-input-button
+  let rollDiceButton = document.getElementById("rollDiceButton");
+	rollDiceButton.disabled = true;
+
+	// initialize counter starting at 1
+	let animationCounter = 1;
+	// initialize empty variables
+	let rollValue1;
+	let rollValue2;
+	let rollValueBoth;
+
+	// Clear previous marked number if marked
+	// https://stackoverflow.com/questions/3390396/how-can-i-check-for-undefined-in-javascript
+	if (typeof numberToMark !== 'undefined') {
+	numberToMark.style.boxShadow = "none";
+  }
+
+	let rollAnimation = setInterval(function() {
+    // animation repeats
+	  if (animationCounter >= 15) {
+	    clearInterval(rollAnimation); // finish the animation
+			animationCounter = 1; // reset counter
+			// https://stackoverflow.com/questions/1723716/how-to-concatenate-two-numbers-in-javascript
+			rollValueBoth = `${rollValue1}${rollValue2}`;
+			markRolledNumber(rollValueBoth);
+			rollDiceButton.disabled = false;
+	    return;
+	  }
+
+		let diceImage1 = document.getElementById("diceImage1");
+	  rollValue1 = Math.floor(Math.random() * 6) + 1;
+		diceImage1.src = "dice/dice-"+ rollValue1 +".svg";
+
+		let diceImage2 = document.getElementById("diceImage2");
+		rollValue2 = Math.floor(Math.random() * 6) + 1;
+	  diceImage2.src = "dice/dice-"+ rollValue2 +".svg";
+
+		animationCounter += 1;
+  // delay time
+	}, 75);
+
+
+
+	}
+
+function markRolledNumber(param) {
+	let constructedID = "number"+param;
+  numberToMark = document.getElementById(constructedID);
+	// border without affecting size: https://www.delftstack.com/howto/css/css-inner-border/
+	// can easily be applied and removed without affecting border
+	numberToMark.style.boxShadow = "0px 0px 0px 5px #0F0 inset";
+}
+
+</script>
+
+<script src="DiceRoulette.js"></script>
+
+</body>
+</html>

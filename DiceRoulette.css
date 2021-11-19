@@ -1,0 +1,179 @@
+* {
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.tableWrapper {
+  position: relative;
+  float: left;
+  width: 600px; /* if not defined, objects below are overflowed by absolute objects */
+  height: 600px; /* auto not possible? */
+}
+
+.grid-container {
+  position: absolute;
+  display: grid; /* inline-grid doesn't seem to affect view */
+  grid-template-columns: repeat(9, 60px);
+  grid-template-rows: repeat(9, 60px);
+  /* https://stackoverflow.com/questions/47882924/preventing-double-borders-in-css-grid */
+  border-top: 2px solid #DDD;
+  border-left: 2px solid #DDD;
+  background-color: #090;
+  z-index: 10;
+}
+
+.grid-container > div {
+  /* https://stackoverflow.com/questions/47882924/preventing-double-borders-in-css-grid */
+  border-bottom: 2px solid #DDD;
+  border-right: 2px solid #DDD;
+  text-align: center;
+  line-height: 60px;
+  font-size: 12px;
+  color: #EEE;
+  user-select: none; /* Add prefix for other browsers */
+}
+
+.red {
+  background-color: #D22;
+}
+.blk {
+  background-color: #222;
+}
+
+#secondHalfRow {
+  grid-column-start: 7;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  line-height: 180px;
+}
+#firstHalfRow {
+  grid-column-start: 7;
+  grid-row-start: 4;
+  grid-row-end: 7;
+  line-height: 180px;
+}
+
+#third12Row {
+  grid-column-start: 8;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  line-height: 120px;
+}
+#second12Row {
+  grid-column-start: 8;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  line-height: 120px;
+}
+#first12Row {
+  grid-column-start: 8;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  line-height: 120px;
+}
+
+#row6 {
+  grid-column-start: 9;
+  grid-row-start: 1;
+}
+#row5 {
+  grid-column-start: 9;
+  grid-row-start: 2;
+}
+#row4 {
+  grid-column-start: 9;
+  grid-row-start: 3;
+}
+#row3 {
+  grid-column-start: 9;
+  grid-row-start: 4;
+}
+#row2 {
+  grid-column-start: 9;
+  grid-row-start: 5;
+}
+#row1 {
+  grid-column-start: 9;
+  grid-row-start: 6;
+}
+
+#firstHalfColumn {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 7;
+}
+#secondHalfColumn {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 7;
+}
+
+#first12Column {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 8;
+}
+#second12Column {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 8;
+}
+#third12Column {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 8;
+}
+
+#column1 {
+  grid-column-start: 1;
+  grid-row-start: 9;
+}
+#column2 {
+  grid-column-start: 2;
+  grid-row-start: 9;
+}
+#column3 {
+  grid-column-start: 3;
+  grid-row-start: 9;
+}
+#column4 {
+  grid-column-start: 4;
+  grid-row-start: 9;
+}
+#column5 {
+  grid-column-start: 5;
+  grid-row-start: 9;
+}
+#column6 {
+  grid-column-start: 6;
+  grid-row-start: 9;
+}
+
+.actionOverlay {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 15px;
+  display: inline-grid;
+  grid-template-columns: repeat(11, 30px);
+  grid-template-rows: repeat(11, 30px);
+  border-top: 2px solid black; /* define borders so lines up */
+  border-left: 2px solid black; /* or use 32px boxes*/
+  background-color: rgba(201, 76, 76, 0.3);
+  z-index: 2;
+}
+.actionOverlay > div {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.diceWrapper {
+  float: left;
+}
+
+.diceImage {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}

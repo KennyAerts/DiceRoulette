@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dice Roulette</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> -->
+	<style type="text/css">
+		* {
+			font-family: 'Roboto Mono', sans-serif;
+		}
+		.row {
+  		width: 100%;
+  		display: flex;
+ 			flex-direction: row;
+			justify-content: left;
+		}
+		.box {
+			box-sizing: border-box; /* allign border to inside */
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+ 			width: 80px; height: 80px;
+ 			border: 1px solid #666;
+ 			border-collapse: collapse;
+ 			text-align: center;
+ 			line-height: 80px; /* Must be same as height, only for 1 line text */
+		}
+    #squares {
+      position: absolute;
+    }
+    #circles {
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .circle {
+      box-sizing: border-box; /* allign border to inside */
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      width: 40px; height: 40px;
+      border: 1px solid #F0F;
+      border-radius: 10px;
+      border-collapse: collapse;
+      text-align: center;
+      line-height: 40px; /* Must be same as height, only for 1 line text */
+    }      
+    }
+
+
+	</style>
+</head>
+<body>
+
+<h1>Dice Roulette</h1>
+<div>
+<div id ="squares"> 
+  <div class="row">
+    <div class="box">16</div>
+    <div class="box">26</div>
+    <div class="box">36</div>
+    <div class="box">46</div>
+    <div class="box">56</div>
+    <div class="box">66</div>
+  </div>
+  <div class="row">
+    <div class="box">15</div>
+    <div class="box">25</div>
+    <div class="box">35</div>
+    <div class="box">45</div>
+    <div class="box">55</div>
+    <div class="box">65</div>
+  </div>
+  <div class="row">
+    <div class="box">14</div>
+    <div class="box">24</div>
+    <div class="box">34</div>
+    <div class="box">44</div>
+    <div class="box">54</div>
+    <div class="box">64</div>
+  </div>
+  <div class="row">
+    <div class="box">13</div>
+    <div class="box">23</div>
+    <div class="box">33</div>
+    <div class="box">43</div>
+    <div class="box">53</div>
+    <div class="box">63</div>
+  </div>
+  <div class="row">
+    <div class="box">12</div>
+    <div class="box">22</div>
+    <div class="box">32</div>
+    <div class="box">42</div>
+    <div class="box">52</div>
+    <div class="box">62</div>
+  </div>
+  <div class="row">
+    <div class="box">11</div>
+    <div class="box">21</div>
+    <div class="box">31</div>
+    <div class="box">41</div>
+    <div class="box">51</div>
+    <div class="box">61</div>
+  </div>
+</div>
+
+<div id="circles">
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>
+  <div class="row">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>    
+  </div>                    
+</div>
+</div>
+
+<script>
+
+
+</script>	
+
+</body>
+</html>
