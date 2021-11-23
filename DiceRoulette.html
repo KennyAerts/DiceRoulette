@@ -11,7 +11,7 @@
 
 <h1>Dice Roulette</h1>
 <div class="tableWrapper">
-<div class="grid-container">
+<div class="betsWrapper">
 	<div class="red" id="number16">16</div>	<div class="blk" id="number26">26</div>	<div class="red" id="number36">36</div>	<div class="blk" id="number46">46</div>	<div class="red" id="number56">56</div>	<div class="blk" id="number66">66</div>
 	<div class="red" id="number15">15</div>	<div class="blk" id="number25">25</div>	<div class="red" id="number35">35</div>	<div class="blk" id="number45">45</div>	<div class="red" id="number55">55</div>	<div class="blk" id="number65">65</div>
 	<div class="blk" id="number14">14</div>	<div class="red" id="number24">24</div>	<div class="blk" id="number34">34</div>	<div class="red" id="number44">44</div>	<div class="blk" id="number54">54</div>	<div class="red" id="number64">64</div>
@@ -19,64 +19,129 @@
 	<div class="red" id="number12">12</div>	<div class="blk" id="number22">22</div>	<div class="red" id="number32">32</div>	<div class="blk" id="number42">42</div>	<div class="red" id="number52">52</div>	<div class="blk" id="number62">62</div>
 	<div class="red" id="number11">11</div>	<div class="blk" id="number21">21</div>	<div class="red" id="number31">31</div>	<div class="blk" id="number41">41</div>	<div class="red" id="number51">51</div>	<div class="blk" id="number61">61</div>
 
-  <div id="firstHalfRow">1st H</div>
-  <div id="secondHalfRow">2nd H</div>
-  <div id="first12Row">1st 12</div>
-  <div id="second12Row">2nd 12</div>
-  <div id="third12Row">3rd 12</div>
-  <div id="row6">R6</div>
-  <div id="row5">R5</div>
-  <div id="row4">R4</div>
-  <div id="row3">R3</div>
-  <div id="row2">R2</div>
-  <div id="row1">R1</div>
+  <div class="outsideBets" id="firstHalfRow">1st H</div>
+  <div class="outsideBets" id="secondHalfRow">2nd H</div>
+  <div class="outsideBets" id="first12Row">1st 12</div>
+  <div class="outsideBets" id="second12Row">2nd 12</div>
+  <div class="outsideBets" id="third12Row">3rd 12</div>
+  <div class="outsideBets" id="row6">R6</div>
+  <div class="outsideBets" id="row5">R5</div>
+  <div class="outsideBets" id="row4">R4</div>
+  <div class="outsideBets" id="row3">R3</div>
+  <div class="outsideBets" id="row2">R2</div>
+  <div class="outsideBets" id="row1">R1</div>
 
-  <div id="firstHalfColumn">1st H</div>
-  <div id="secondHalfColumn">2nd H</div>
-  <div id="first12Column">1st 12</div>
-  <div id="second12Column">2nd 12</div>
-  <div id="third12Column">3rd 12</div>
-  <div id="column1">C1</div>
-  <div id="column2">C2</div>
-  <div id="column3">C3</div>
-  <div id="column4">C4</div>
-  <div id="column5">C5</div>
-  <div id="column6">C6</div>
+  <div class="outsideBets" id="firstHalfColumn">1st H</div>
+  <div class="outsideBets" id="secondHalfColumn">2nd H</div>
+  <div class="outsideBets" id="first12Column">1st 12</div>
+  <div class="outsideBets" id="second12Column">2nd 12</div>
+  <div class="outsideBets" id="third12Column">3rd 12</div>
+  <div class="outsideBets" id="column1">C1</div>
+  <div class="outsideBets" id="column2">C2</div>
+  <div class="outsideBets" id="column3">C3</div>
+  <div class="outsideBets" id="column4">C4</div>
+  <div class="outsideBets" id="column5">C5</div>
+  <div class="outsideBets" id="column6">C6</div>
 
-  <div class="secondQuarter">2nd Q</div>
-  <div class="fourthQuarter">4th Q</div>
-  <div class="even">Even</div>
-  <div class="firstQuarter">1st Q</div>
-  <div class="thirdQuarter">3rd Q</div>
-  <div class="odd">Odd</div>
-  <div class="red">Red</div>
-  <div class="blk">Black</div>
-  <div class="same">Same</div>
+  <div class="outsideBets" id="secondQuarter">2nd Q</div>
+  <div class="outsideBets" id="fourthQuarter">4th Q</div>
+  <div class="outsideBets" id="even">Even</div>
+  <div class="outsideBets" id="firstQuarter">1st Q</div>
+  <div class="outsideBets" id="thirdQuarter">3rd Q</div>
+  <div class="outsideBets" id="odd">Odd</div>
+  <div class="outsideBets red" id="allRed">Red</div>
+  <div class="outsideBets blk" id="allBlk">Black</div>
+  <div class="outsideBets" id="same">Same</div>
 </div>
 <div class="actionOverlay">
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
+	<div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div><div class="insideBets"></div>
 </div>
 
 </div>
-<div class="diceWrapper">
+<div class="sideWrapper">
    <!-- dice icons: https://game-icons.net/tags/dice.html -->
-  <img class ="diceImage" id="diceImage1" src = "dice/dice-blank.svg">
-  <img class ="diceImage" id="diceImage2" src = "dice/dice-blank.svg">
+  <img class="diceImage" id="diceImage1" src="dice/dice-blank.svg">
+  <img class="diceImage" id="diceImage2" src="dice/dice-blank.svg">
 	<button id="rollDiceButton" onclick="rollDice()">Roll dice</button>
-
+    <br>
+	<p>Bank roll:</p>
+	<div id="bankRollAmount">1000</div>
+	<p>Total bet:</p>
+	<div id="totalBetAmount">0</div>
+	  <br>
+	<label for="betAmountSelector">Select a bet amount:</label>
+  <select name="betAmountSelector" id="betAmountSelector" onchange="betAmountSelectorChanged()">
+    <option value="1">1</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="25">25</option>
+    <option value="100">100</option>
+    <option value="500">500</option>
+  </select>
+	  <br><br>
+	<button id="clearAllBetsButton" onclick="clearAllBets()">Clear all bets</button>
 </div>
 
 <script>
+
+
+
+function clickedBet() {
+  if (this.children[0].style.visibility == "visible") {
+    this.children[0].style.visibility = "hidden";
+		bankRollAmount += betAmount;
+		document.getElementById("bankRollAmount").innerHTML = bankRollAmount;
+		// enable roll button again if bankroll positive
+		if (bankRollAmount >= 0) {
+			rollDiceButton.disabled = false;
+		}
+		totalBetAmount -= betAmount;
+		document.getElementById("totalBetAmount").innerHTML = totalBetAmount;
+  }
+  else {
+    this.children[0].style.visibility = "visible";
+    bankRollAmount -= betAmount;
+		document.getElementById("bankRollAmount").innerHTML = bankRollAmount;
+		// disable roll button if negative bankroll
+		if (bankRollAmount < 0) {
+			rollDiceButton.disabled = true;
+		}
+		totalBetAmount += betAmount;
+		document.getElementById("totalBetAmount").innerHTML = totalBetAmount;
+  }
+}
+
+
+
+// automize HTML setup
+// add chip images to table and hide them on load
+let allOutsideBets = document.getElementsByClassName("outsideBets");
+for (let i = 0; i < allOutsideBets.length; i++) {
+	  let chipImageOutsideBet = document.createElement("img");
+		chipImageOutsideBet.src = "chips/yellow.svg";
+		chipImageOutsideBet.classList.add("chipImageOutsideBet");
+    allOutsideBets[i].appendChild(chipImageOutsideBet);
+    allOutsideBets[i].addEventListener('click', clickedBet, false);
+}
+
+let allInsideBets = document.getElementsByClassName("insideBets");
+for (let i = 0; i < allInsideBets.length; i++) {
+	  let chipImageInsideBet = document.createElement("img");
+		chipImageInsideBet.src = "chips/yellow.svg";
+		chipImageInsideBet.classList.add("chipImageInsideBet");
+    allInsideBets[i].appendChild(chipImageInsideBet);
+    allInsideBets[i].addEventListener('click', clickedBet, false);
+}
 
 	// https://javascript.info/js-animation
 	// repeat random times with Timeout for animation https://www.w3schools.com/js/js_timing.asp
@@ -85,12 +150,51 @@
 
 // global variables
 let	numberToMark;
+let betAmount = 1; // init first default value
+let bankRollAmount = 1000; // init default bankroll amount
+let totalBetAmount = 0; // init default total bet amount
+let rollDiceButton = document.getElementById("rollDiceButton");
+
+function clearAllChips() {
+  let allChipImagesInsideBets = document.getElementsByClassName("chipImageInsideBet");
+	for (let i = 0; i < allChipImagesInsideBets.length; i++) {
+		allChipImagesInsideBets[i].style.visibility = "hidden";
+	}
+	let allChipImagesOutsideBets = document.getElementsByClassName("chipImageOutsideBet");
+	for (let i = 0; i < allChipImagesOutsideBets.length; i++) {
+		allChipImagesOutsideBets[i].style.visibility = "hidden";
+	}
+}
+
+function clearTotalBet() {
+	bankRollAmount += totalBetAmount; // add total bets to bankroll again
+	totalBetAmount -= totalBetAmount; // set total bets to zero
+	document.getElementById("bankRollAmount").innerHTML = bankRollAmount;
+	document.getElementById("totalBetAmount").innerHTML = totalBetAmount;
+	// enable roll button again once negative bet is cleared
+	if (bankRollAmount >= 0) {
+		rollDiceButton.disabled = false;
+	}
+}
+
+function betAmountSelectorChanged() {
+	// input value is fetched as text, convert to number first
+	// https://www.w3schools.com/jsref/jsref_number.asp
+	betAmount = Number(document.getElementById("betAmountSelector").value);
+	clearAllChips();
+	clearTotalBet();
+}
+
+function clearAllBets() {
+	// for manual button use
+	// TODO: only enable button if there are chips on table
+	clearAllChips();
+	clearTotalBet();
+}
 
 function rollDice() {
-
   // https://stackoverflow.com/questions/13831601/disabling-and-enabling-a-html-input-button
-  let rollDiceButton = document.getElementById("rollDiceButton");
-	rollDiceButton.disabled = true;
+  rollDiceButton.disabled = true;
 
 	// initialize counter starting at 1
 	let animationCounter = 1;
@@ -128,10 +232,7 @@ function rollDice() {
 		animationCounter += 1;
   // delay time
 	}, 75);
-
-
-
-	}
+}
 
 function markRolledNumber(param) {
 	let constructedID = "number"+param;
@@ -140,6 +241,7 @@ function markRolledNumber(param) {
 	// can easily be applied and removed without affecting border
 	numberToMark.style.boxShadow = "0px 0px 0px 5px #0F0 inset";
 }
+
 
 </script>
 
