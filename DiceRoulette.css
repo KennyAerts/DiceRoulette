@@ -215,3 +215,14 @@
   height: 120px;
   margin-right: 10px;
 }
+
+#winnings {
+  color: #2D2;
+}
+
+#losings {
+  color: #D22;
+}
+/* #bankRollAmount, #winnings {
+  float: left;
+} */
