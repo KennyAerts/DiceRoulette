@@ -216,6 +216,21 @@
   margin-right: 10px;
 }
 
+.moneyWrapper {
+  width:100%;
+  height:auto;
+  display:flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#bankRollAmount, #totalBetAmount {
+  min-width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: right;
+}
+
 #winnings {
   color: #2D2;
 }
