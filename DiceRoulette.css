@@ -2,6 +2,11 @@
   font-family: 'Roboto Mono', sans-serif;
 }
 
+#content {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .tableWrapper {
   position: relative;
   float: left;

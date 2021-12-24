@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="DiceRoulette.css">
 </head>
 <body>
-
+<div id="content">
+	
 <h1>Dice Roulette</h1>
 <div class="tableWrapper">
 <div class="betsWrapper">
@@ -218,6 +219,8 @@
 
 <script src="lookups.js"></script>
 <script src="actions.js"></script>
+
+</div>
 
 </body>
 </html>
